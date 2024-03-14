@@ -1,0 +1,20 @@
+create database C_Pagos
+
+CREATE TABLE Alumno (
+    CodigoAlumno INT PRIMARY KEY,
+    Nombre NVARCHAR(50),
+    ApellidoPaterno NVARCHAR(50),
+    ApellidoMaterno NVARCHAR(50),
+	Direccion NVARCHAR(50),
+	Correo NVARCHAR (50),
+	Telefono INT,
+);
+
+
+CREATE TABLE PagosPendientes (
+    IDPago INT PRIMARY KEY,
+    CodigoAlumno INT,
+    Monto DECIMAL(10, 2),
+    FechaVencimiento DATE,
+    FOREIGN KEY (CodigoAlumno) REFERENCES Alumno(CodigoAlumno)
+);
