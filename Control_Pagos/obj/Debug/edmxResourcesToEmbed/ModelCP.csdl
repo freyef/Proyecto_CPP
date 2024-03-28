@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="C_PagosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="CodigoAlumno" />
+    </Key>
+    <Property Name="CodigoAlumno" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="Int32" />
+    <NavigationProperty Name="PagosPendientes" Relationship="Self.FK__PagosPend__Codig__398D8EEE" FromRole="Alumno" ToRole="PagosPendientes" />
+  </EntityType>
+  <EntityType Name="PagosPendientes">
+    <Key>
+      <PropertyRef Name="IDPago" />
+    </Key>
+    <Property Name="IDPago" Type="Int32" Nullable="false" />
+    <Property Name="CodigoAlumno" Type="Int32" />
+    <Property Name="Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK__PagosPend__Codig__398D8EEE" FromRole="PagosPendientes" ToRole="Alumno" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__PagosPend__Codig__398D8EEE">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+    <End Role="PagosPendientes" Type="Self.PagosPendientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="CodigoAlumno" />
+      </Principal>
+      <Dependent Role="PagosPendientes">
+        <PropertyRef Name="CodigoAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="C_PagosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" />
+    <EntitySet Name="PagosPendientes" EntityType="Self.PagosPendientes" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK__PagosPend__Codig__398D8EEE" Association="Self.FK__PagosPend__Codig__398D8EEE">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="PagosPendientes" EntitySet="PagosPendientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

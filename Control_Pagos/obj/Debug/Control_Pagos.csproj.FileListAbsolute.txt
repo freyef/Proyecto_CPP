@@ -1,0 +1,16 @@
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\Control_Pagos.exe.config
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\Control_Pagos.exe
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\Control_Pagos.pdb
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\EntityFramework.dll
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\EntityFramework.SqlServer.dll
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\EntityFramework.xml
+C:\PROYECTO CPPPPPPPP\Control_Pagos\bin\Debug\EntityFramework.SqlServer.xml
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.AssemblyReference.cache
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.SuggestedBindingRedirects.cache
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.Form1.resources
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.Properties.Resources.resources
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.GenerateResource.cache
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.CoreCompileInputs.cache
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.CopyComplete
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.exe
+C:\PROYECTO CPPPPPPPP\Control_Pagos\obj\Debug\Control_Pagos.pdb

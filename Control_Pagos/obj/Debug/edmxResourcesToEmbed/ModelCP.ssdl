@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="C_PagosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="CodigoAlumno" />
+    </Key>
+    <Property Name="CodigoAlumno" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApellidoPaterno" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApellidoMaterno" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Correo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="int" />
+  </EntityType>
+  <EntityType Name="PagosPendientes">
+    <Key>
+      <PropertyRef Name="IDPago" />
+    </Key>
+    <Property Name="IDPago" Type="int" Nullable="false" />
+    <Property Name="CodigoAlumno" Type="int" />
+    <Property Name="Monto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="FechaVencimiento" Type="date" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__PagosPend__Codig__398D8EEE">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+    <End Role="PagosPendientes" Type="Self.PagosPendientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="CodigoAlumno" />
+      </Principal>
+      <Dependent Role="PagosPendientes">
+        <PropertyRef Name="CodigoAlumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="C_PagosModelStoreContainer">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PagosPendientes" EntityType="Self.PagosPendientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__PagosPend__Codig__398D8EEE" Association="Self.FK__PagosPend__Codig__398D8EEE">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="PagosPendientes" EntitySet="PagosPendientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
