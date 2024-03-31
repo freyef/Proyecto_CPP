@@ -29,3 +29,18 @@ C:\Users\Usuario\Desktop\trabajo pool\Proyecto_CPP\Control_Pagos\obj\Debug\Contr
 C:\Users\Usuario\Desktop\trabajo pool\Proyecto_CPP\Control_Pagos\obj\Debug\Control_.64BE1325.Up2Date
 C:\Users\Usuario\Desktop\trabajo pool\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.exe
 C:\Users\Usuario\Desktop\trabajo pool\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.pdb
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\Control_Pagos.exe.config
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\Control_Pagos.exe
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\Control_Pagos.pdb
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\EntityFramework.dll
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\EntityFramework.xml
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.AssemblyReference.cache
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.Form1.resources
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.Properties.Resources.resources
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.GenerateResource.cache
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.CoreCompileInputs.cache
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_.64BE1325.Up2Date
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.exe
+D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.pdb

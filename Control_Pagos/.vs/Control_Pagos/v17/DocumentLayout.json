@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\",
+  "WorkspaceRootPath": "D:\\Proyecto_CPP\\Control_Pagos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|c:\\users\\usuario\\desktop\\trabajo pool\\proyecto_cpp\\control_pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|c:\\users\\usuario\\desktop\\trabajo pool\\proyecto_cpp\\control_pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|D:\\Proyecto_CPP\\Control_Pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\modelcp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:modelcp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|d:\\proyecto_cpp\\control_pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,41 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
+              "DocumentMoniker": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
+              "ToolTip": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAABsAAAAMAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAIAzwCkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T04:45:35.997Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModelCP.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\ModelCP.edmx",
-              "RelativeDocumentMoniker": "ModelCP.edmx",
-              "ToolTip": "D:\\ProyectoCPP\\Control_Pagos\\ModelCP.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-03-14T20:59:38.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
+              "DocumentMoniker": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\trabajo pool\\Proyecto_CPP\\Control_Pagos\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T20:53:21.995Z",
+              "WhenOpened": "2024-03-31T23:31:00.434Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

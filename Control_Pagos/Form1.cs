@@ -25,7 +25,7 @@ namespace Control_Pagos
         private void label7_Click(object sender, EventArgs e)
         {
                
-        }   
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Control_Pagos
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,6 +53,11 @@ namespace Control_Pagos
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
