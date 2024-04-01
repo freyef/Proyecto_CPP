@@ -44,3 +44,4 @@ D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.csproj.CoreCompileInputs.c
 D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_.64BE1325.Up2Date
 D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.exe
 D:\Proyecto_CPP\Control_Pagos\obj\Debug\Control_Pagos.pdb
+D:\Proyecto_CPP\Control_Pagos\bin\Debug\Guna.UI2.dll

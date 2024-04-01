@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,13 +25,33 @@ namespace Control_Pagos
 
         private void label7_Click(object sender, EventArgs e)
         {
-               
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
+            try
+            {
+                using (var bd = new C_PagosEntities())
+                {
+                    var alumno = new Alumno();
+                    alumno.CodigoAlumno = Convert.ToInt32(textBox1.Text);
+                    alumno.Nombre = textBox2.Text;
+                    alumno.ApellidoPaterno = textBox3.Text;
+                    alumno.ApellidoMaterno = textBox4.Text;
+                    alumno.Direccion = textBox7.Text;
+                    alumno.Correo = textBox6.Text;
+                    alumno.Telefono = Convert.ToInt32(textBox5.Text);
+                    bd.Alumno.Add(alumno);
+                    bd.SaveChanges();
+                    MessageBox.Show("Cliente registrado correctamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar cliente: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }      
+    }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -58,6 +79,16 @@ namespace Control_Pagos
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
