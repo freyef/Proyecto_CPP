@@ -75,6 +75,26 @@ namespace Control_Pagos
 
         private void button4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Convertir el valor de la cadena a entero fuera de la consulta LINQ
+                int codigoAlumno = int.Parse(textBox1.Text);
+                using (var bd = new C_PagosEntities())
+                {             
+                    var alumno = bd.Alumno.First(s => s.CodigoAlumno == codigoAlumno);            
+                    textBox2.Text = alumno.Nombre;
+                    textBox3.Text = alumno.ApellidoPaterno;
+                    textBox4.Text = alumno.ApellidoMaterno;
+                    textBox7.Text = alumno.Direccion;
+                    textBox6.Text = alumno.Correo;
+                    textBox5.Text = alumno.Telefono.ToString();
+                    MessageBox.Show("Cliente encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Cliente no registrado: {ex.Message}", "Cliente no encontrado");
+            }
 
         }
 
@@ -89,6 +109,11 @@ namespace Control_Pagos
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
