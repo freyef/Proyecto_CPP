@@ -38,7 +38,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.Direccion = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buteliminar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,9 +55,6 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.c_PagosDataSet = new Control_Pagos.C_PagosDataSet();
-            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alumnoTableAdapter = new Control_Pagos.C_PagosDataSetTableAdapters.AlumnoTableAdapter();
             this.codigoAlumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,12 +62,15 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.c_PagosDataSet = new Control_Pagos.C_PagosDataSet();
+            this.alumnoTableAdapter = new Control_Pagos.C_PagosDataSetTableAdapters.AlumnoTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -131,7 +131,7 @@
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.Direccion);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.buteliminar);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
@@ -204,19 +204,20 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // buteliminar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(126)))), ((int)(((byte)(232)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(526, 200);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 46);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buteliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(126)))), ((int)(((byte)(232)))));
+            this.buteliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buteliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.buteliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buteliminar.Location = new System.Drawing.Point(526, 200);
+            this.buteliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.buteliminar.Name = "buteliminar";
+            this.buteliminar.Size = new System.Drawing.Size(99, 46);
+            this.buteliminar.TabIndex = 16;
+            this.buteliminar.Text = "Eliminar";
+            this.buteliminar.UseVisualStyleBackColor = false;
+            this.buteliminar.Click += new System.EventHandler(this.buteliminar_Click);
             // 
             // textBox2
             // 
@@ -392,24 +393,10 @@
             this.dataGridView1.DataSource = this.alumnoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(34, 317);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(744, 175);
             this.dataGridView1.TabIndex = 19;
-            // 
-            // c_PagosDataSet
-            // 
-            this.c_PagosDataSet.DataSetName = "C_PagosDataSet";
-            this.c_PagosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alumnoBindingSource
-            // 
-            this.alumnoBindingSource.DataMember = "Alumno";
-            this.alumnoBindingSource.DataSource = this.c_PagosDataSet;
-            // 
-            // alumnoTableAdapter
-            // 
-            this.alumnoTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codigoAlumnoDataGridViewTextBoxColumn
             // 
@@ -460,6 +447,20 @@
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // alumnoBindingSource
+            // 
+            this.alumnoBindingSource.DataMember = "Alumno";
+            this.alumnoBindingSource.DataSource = this.c_PagosDataSet;
+            // 
+            // c_PagosDataSet
+            // 
+            this.c_PagosDataSet.DataSetName = "C_PagosDataSet";
+            this.c_PagosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alumnoTableAdapter
+            // 
+            this.alumnoTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,8 +483,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,7 +508,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buteliminar;
         private System.Windows.Forms.Button button4;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;

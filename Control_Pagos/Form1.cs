@@ -45,7 +45,9 @@ namespace Control_Pagos
                     bd.Alumno.Add(alumno);
                     bd.SaveChanges();
                     MessageBox.Show("Cliente registrado correctamente.");
+                    LimpiarCampos();
                 }
+                dataGridView1.Refresh();
             }
             catch (Exception ex)
             {
@@ -91,7 +93,7 @@ namespace Control_Pagos
                     textBox6.Text = alumno.Correo;
                     textBox5.Text = alumno.Telefono.ToString();
                     MessageBox.Show("Cliente encontrado");
-                }
+                }               
             }
             catch (Exception ex)
             {
@@ -134,6 +136,7 @@ namespace Control_Pagos
                     MessageBox.Show("Cliente actualizado");
                     LimpiarCampos();
                 }
+                dataGridView1.Refresh();
             }
             catch (Exception ex)
             {
@@ -149,6 +152,42 @@ namespace Control_Pagos
             textBox5.Text = "";
             textBox6.Text = "";
             textBox7.Text = "";
+        }
+
+        private void buteliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigoAlumno = int.Parse(textBox1.Text);
+
+                using (var bd = new C_PagosEntities())
+                {
+                    var alumno = bd.Alumno.FirstOrDefault(s => s.CodigoAlumno == codigoAlumno);
+
+                    if (alumno != null)
+                    {
+                        bd.Alumno.Remove(alumno);
+                        bd.SaveChanges();
+                        MessageBox.Show("Cliente eliminado correctamente");
+                        LimpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El cliente no existe en la base de datos", "Cliente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al eliminar cliente: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {        
+
         }
     }
 }
