@@ -34,6 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.Direccion = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -51,20 +52,25 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.c_PagosDataSet = new Control_Pagos.C_PagosDataSet();
+            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alumnoTableAdapter = new Control_Pagos.C_PagosDataSetTableAdapters.AlumnoTableAdapter();
+            this.codigoAlumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoPaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoMaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -144,10 +150,25 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(904, 263);
+            this.groupBox1.Size = new System.Drawing.Size(797, 263);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(126)))), ((int)(((byte)(232)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button5.Location = new System.Drawing.Point(292, 200);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(99, 46);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Actualizar";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox7
             // 
@@ -341,62 +362,6 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(34, 317);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(882, 216);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "CodAlumn";
-            this.columnHeader1.Width = 161;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nombres";
-            this.columnHeader2.Width = 128;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Apellido P";
-            this.columnHeader3.Width = 129;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "ApellidoM";
-            this.columnHeader4.Width = 117;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Gmail";
-            this.columnHeader5.Width = 129;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Telefono";
-            this.columnHeader6.Width = 214;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(894, 342);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(22, 191);
-            this.vScrollBar1.TabIndex = 18;
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -407,30 +372,102 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // button5
+            // dataGridView1
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(126)))), ((int)(((byte)(232)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button5.Location = new System.Drawing.Point(292, 200);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 46);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Actualizar";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoAlumnoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidoPaternoDataGridViewTextBoxColumn,
+            this.apellidoMaternoDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.alumnoBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 317);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(744, 175);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // c_PagosDataSet
+            // 
+            this.c_PagosDataSet.DataSetName = "C_PagosDataSet";
+            this.c_PagosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alumnoBindingSource
+            // 
+            this.alumnoBindingSource.DataMember = "Alumno";
+            this.alumnoBindingSource.DataSource = this.c_PagosDataSet;
+            // 
+            // alumnoTableAdapter
+            // 
+            this.alumnoTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoAlumnoDataGridViewTextBoxColumn
+            // 
+            this.codigoAlumnoDataGridViewTextBoxColumn.DataPropertyName = "CodigoAlumno";
+            this.codigoAlumnoDataGridViewTextBoxColumn.HeaderText = "CodigoAlumno";
+            this.codigoAlumnoDataGridViewTextBoxColumn.Name = "codigoAlumnoDataGridViewTextBoxColumn";
+            this.codigoAlumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoPaternoDataGridViewTextBoxColumn
+            // 
+            this.apellidoPaternoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoPaterno";
+            this.apellidoPaternoDataGridViewTextBoxColumn.HeaderText = "ApellidoPaterno";
+            this.apellidoPaternoDataGridViewTextBoxColumn.Name = "apellidoPaternoDataGridViewTextBoxColumn";
+            this.apellidoPaternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoMaternoDataGridViewTextBoxColumn
+            // 
+            this.apellidoMaternoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoMaterno";
+            this.apellidoMaternoDataGridViewTextBoxColumn.HeaderText = "ApellidoMaterno";
+            this.apellidoMaternoDataGridViewTextBoxColumn.Name = "apellidoMaternoDataGridViewTextBoxColumn";
+            this.apellidoMaternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(946, 545);
-            this.Controls.Add(this.vScrollBar1);
+            this.ClientSize = new System.Drawing.Size(820, 545);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -444,6 +481,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,19 +509,22 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private C_PagosDataSet c_PagosDataSet;
+        private System.Windows.Forms.BindingSource alumnoBindingSource;
+        private C_PagosDataSetTableAdapters.AlumnoTableAdapter alumnoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoAlumnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPaternoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaternoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
     }
 }
 

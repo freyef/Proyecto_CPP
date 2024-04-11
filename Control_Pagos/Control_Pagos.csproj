@@ -65,6 +65,11 @@
     <Compile Include="Alumno.cs">
       <DependentUpon>ModelCP.tt</DependentUpon>
     </Compile>
+    <Compile Include="C_PagosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>C_PagosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +116,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelCP.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="C_PagosDataSet.xsc">
+      <DependentUpon>C_PagosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="C_PagosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>C_PagosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="C_PagosDataSet.xss">
+      <DependentUpon>C_PagosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ModelCP.edmx.diagram">
       <DependentUpon>ModelCP.edmx</DependentUpon>
     </None>

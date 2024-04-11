@@ -55,6 +55,8 @@ namespace Control_Pagos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'c_PagosDataSet.Alumno' Puede moverla o quitarla según sea necesario.
+            this.alumnoTableAdapter.Fill(this.c_PagosDataSet.Alumno);
 
         }
 
@@ -77,7 +79,7 @@ namespace Control_Pagos
         {
             try
             {
-                // Convertir el valor de la cadena a entero fuera de la consulta LINQ
+                
                 int codigoAlumno = int.Parse(textBox1.Text);
                 using (var bd = new C_PagosEntities())
                 {             
@@ -115,7 +117,38 @@ namespace Control_Pagos
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int codigoAlumno = int.Parse(textBox1.Text);
+                using (var bd = new C_PagosEntities())
+                {
+                    var alumno = bd.Alumno.First(s => s.CodigoAlumno == codigoAlumno);                  
+                    alumno.CodigoAlumno = Convert.ToInt32(textBox1.Text);
+                    alumno.Nombre = textBox2.Text;
+                    alumno.ApellidoPaterno = textBox3.Text;
+                    alumno.ApellidoMaterno = textBox4.Text;
+                    alumno.Direccion = textBox7.Text;
+                    alumno.Correo = textBox6.Text;
+                    alumno.Telefono = Convert.ToInt32(textBox5.Text);
+                    bd.SaveChanges();
+                    MessageBox.Show("Cliente actualizado");
+                    LimpiarCampos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Cliente no actualizado: {ex.Message}", "Cliente no actualizado");
+            }
+        }
+        private void LimpiarCampos()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
         }
     }
 }
