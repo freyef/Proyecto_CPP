@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -187,6 +188,113 @@ namespace Control_Pagos
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {        
+
+        }
+
+        private void btnPAGOS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var bd = new C_PagosEntities())
+                {
+                    var pagos = new PagosPendientes();
+                    pagos.IDPago = Convert.ToInt32(textcodpago.Text);
+                    pagos.CodigoAlumno = Convert.ToInt32(textcodalum.Text);
+                    pagos.Monto = Convert.ToInt32(textmonto.Text);
+                    pagos.Mes = textmes.Text;
+                    DateTime fechaVencimiento;
+                    if (DateTime.TryParseExact(textBox11.Text, "yyyy-MM-dd", null, DateTimeStyles.None, out fechaVencimiento))
+                    {
+                        pagos.FechaVencimiento = fechaVencimiento;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Formato de fecha inválido. El formato debe ser 'yyyy-MM-dd'.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    string pagoRealizado = textRP.Text.ToUpper();
+                    if (pagoRealizado != "SI" && pagoRealizado != "NO")
+                    {
+                        MessageBox.Show("El campo PagoRealizado debe ser 'SI' o 'NO'.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    pagos.PagoRealizado = pagoRealizado;
+
+                    bd.PagosPendientes.Add(pagos);
+                    bd.SaveChanges();
+                    MessageBox.Show("Pagos registrado correctamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar Pago: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int codigoAlumno = int.Parse(textcodalum.Text);
+                using (var bd = new C_PagosEntities())
+                {
+                    var pagos = bd.PagosPendientes.First(s => s.CodigoAlumno == codigoAlumno);
+                    textcodpago.Text = pagos.IDPago.ToString();
+                    textcodalum.Text = pagos.CodigoAlumno.ToString();
+                    textmonto.Text = pagos.Monto.ToString();
+                    textmes.Text = pagos.Mes;
+                    textBox11.Text = pagos.FechaVencimiento.ToString();
+                    textRP.Text = pagos.PagoRealizado;
+                    MessageBox.Show("Registro encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Registro no Encontrado: {ex.Message}", "Registro no encontrado");
+            }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigoAlumno;
+                if (!int.TryParse(textcodalum.Text, out codigoAlumno))
+                {
+                    MessageBox.Show("Por favor, ingrese un código de alumno Exitente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                using (var bd = new C_PagosEntities())
+                {
+                    var pagos = bd.PagosPendientes.First(s => s.CodigoAlumno == codigoAlumno);
+                    pagos.IDPago = Convert.ToInt32(textcodpago.Text);
+                    pagos.CodigoAlumno = Convert.ToInt32(textcodalum.Text);
+                    pagos.Monto = Convert.ToInt32(textmonto.Text);
+                    pagos.Mes = textmes.Text;
+                    DateTime fechaVencimiento;
+                    if (DateTime.TryParseExact(textBox11.Text, "yyyy-MM-dd", null, DateTimeStyles.None, out fechaVencimiento))
+                    {
+                        pagos.FechaVencimiento = fechaVencimiento;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Formato de fecha inválido. El formato debe ser 'yyyy-MM-dd'.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    pagos.PagoRealizado = textRP.Text;
+                    bd.SaveChanges();
+                    MessageBox.Show("Registro actualizado");
+                    LimpiarCampos();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Registro no actualizado: {ex.Message}", "Registro no actualizado");
+            }
 
         }
     }

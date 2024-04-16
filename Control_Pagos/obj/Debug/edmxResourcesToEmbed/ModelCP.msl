@@ -17,6 +17,8 @@
     <EntitySetMapping Name="PagosPendientes">
       <EntityTypeMapping TypeName="C_PagosModel.PagosPendientes">
         <MappingFragment StoreEntitySet="PagosPendientes">
+          <ScalarProperty Name="PagoRealizado" ColumnName="PagoRealizado" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
           <ScalarProperty Name="IDPago" ColumnName="IDPago" />
           <ScalarProperty Name="CodigoAlumno" ColumnName="CodigoAlumno" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />

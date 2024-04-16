@@ -18,8 +18,10 @@
     </Key>
     <Property Name="IDPago" Type="int" Nullable="false" />
     <Property Name="CodigoAlumno" Type="int" />
-    <Property Name="Monto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Monto" Type="int" />
+    <Property Name="Mes" Type="nvarchar" MaxLength="50" />
     <Property Name="FechaVencimiento" Type="date" />
+    <Property Name="PagoRealizado" Type="nchar" MaxLength="3" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

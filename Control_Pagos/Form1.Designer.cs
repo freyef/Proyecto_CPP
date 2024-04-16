@@ -65,12 +65,30 @@
             this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.c_PagosDataSet = new Control_Pagos.C_PagosDataSet();
             this.alumnoTableAdapter = new Control_Pagos.C_PagosDataSetTableAdapters.AlumnoTableAdapter();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textcodpago = new System.Windows.Forms.TextBox();
+            this.btnPAGOS = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textRP = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textcodalum = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textmonto = new System.Windows.Forms.TextBox();
+            this.textmes = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -95,7 +113,7 @@
             this.panel1.Location = new System.Drawing.Point(56, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 47);
+            this.panel1.Size = new System.Drawing.Size(1320, 47);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -104,7 +122,7 @@
             this.button2.BackgroundImage = global::Control_Pagos.Properties.Resources.xxxxxx;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.button2.Location = new System.Drawing.Point(682, 7);
+            this.button2.Location = new System.Drawing.Point(1280, 7);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 29);
@@ -461,12 +479,201 @@
             // 
             this.alumnoTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.textcodpago);
+            this.groupBox2.Controls.Add(this.btnPAGOS);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.textRP);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.textcodalum);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.textmonto);
+            this.groupBox2.Controls.Add(this.textmes);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Location = new System.Drawing.Point(846, 50);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(438, 262);
+            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(108, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(260, 29);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "REGISTRO DE PAGOS";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(299, 229);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 33);
+            this.button7.TabIndex = 35;
+            this.button7.Text = "ACTUALIZAR";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox11.Location = new System.Drawing.Point(191, 154);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(77, 20);
+            this.textBox11.TabIndex = 38;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button8.Location = new System.Drawing.Point(166, 229);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 33);
+            this.button8.TabIndex = 34;
+            this.button8.Text = "BUSCAR";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textcodpago
+            // 
+            this.textcodpago.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textcodpago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textcodpago.Location = new System.Drawing.Point(146, 42);
+            this.textcodpago.Name = "textcodpago";
+            this.textcodpago.Size = new System.Drawing.Size(114, 20);
+            this.textcodpago.TabIndex = 29;
+            // 
+            // btnPAGOS
+            // 
+            this.btnPAGOS.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPAGOS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPAGOS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPAGOS.Location = new System.Drawing.Point(40, 229);
+            this.btnPAGOS.Name = "btnPAGOS";
+            this.btnPAGOS.Size = new System.Drawing.Size(94, 33);
+            this.btnPAGOS.TabIndex = 33;
+            this.btnPAGOS.Text = "GUARDAR";
+            this.btnPAGOS.UseVisualStyleBackColor = false;
+            this.btnPAGOS.Click += new System.EventHandler(this.btnPAGOS_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(6, 156);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(179, 18);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Fecha de Vencimiento:";
+            // 
+            // textRP
+            // 
+            this.textRP.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textRP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textRP.Location = new System.Drawing.Point(191, 199);
+            this.textRP.Name = "textRP";
+            this.textRP.Size = new System.Drawing.Size(55, 20);
+            this.textRP.TabIndex = 32;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(6, 42);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(134, 18);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "Codigo de Pago:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(108, 177);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(227, 25);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "REALIZO EL PAGO?";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 70);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(128, 18);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Codigo Alumno:";
+            // 
+            // textcodalum
+            // 
+            this.textcodalum.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textcodalum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textcodalum.Location = new System.Drawing.Point(144, 68);
+            this.textcodalum.Name = "textcodalum";
+            this.textcodalum.Size = new System.Drawing.Size(114, 20);
+            this.textcodalum.TabIndex = 28;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(6, 100);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 18);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "Monto:";
+            // 
+            // textmonto
+            // 
+            this.textmonto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textmonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textmonto.Location = new System.Drawing.Point(144, 98);
+            this.textmonto.Name = "textmonto";
+            this.textmonto.Size = new System.Drawing.Size(67, 20);
+            this.textmonto.TabIndex = 30;
+            // 
+            // textmes
+            // 
+            this.textmes.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textmes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textmes.Location = new System.Drawing.Point(144, 130);
+            this.textmes.Name = "textmes";
+            this.textmes.Size = new System.Drawing.Size(77, 20);
+            this.textmes.TabIndex = 31;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(6, 128);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 18);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Mes:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(820, 545);
+            this.ClientSize = new System.Drawing.Size(1379, 545);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -485,6 +692,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -526,6 +735,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textcodpago;
+        private System.Windows.Forms.Button btnPAGOS;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textRP;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textcodalum;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textmonto;
+        private System.Windows.Forms.TextBox textmes;
+        private System.Windows.Forms.Label label21;
     }
 }
 

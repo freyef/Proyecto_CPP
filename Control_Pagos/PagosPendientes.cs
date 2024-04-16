@@ -16,8 +16,10 @@ namespace Control_Pagos
     {
         public int IDPago { get; set; }
         public Nullable<int> CodigoAlumno { get; set; }
-        public Nullable<decimal> Monto { get; set; }
+        public Nullable<int> Monto { get; set; }
         public Nullable<System.DateTime> FechaVencimiento { get; set; }
+        public string Mes { get; set; }
+        public string PagoRealizado { get; set; }
     
         public virtual Alumno Alumno { get; set; }
     }

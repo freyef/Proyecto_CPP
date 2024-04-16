@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="C_PagosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="C_PagosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="CodigoAlumno" />
@@ -23,8 +23,10 @@
           </Key>
           <Property Name="IDPago" Type="int" Nullable="false" />
           <Property Name="CodigoAlumno" Type="int" />
-          <Property Name="Monto" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Monto" Type="int" />
+          <Property Name="Mes" Type="nvarchar" MaxLength="50" />
           <Property Name="FechaVencimiento" Type="date" />
+          <Property Name="PagoRealizado" Type="nchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -57,8 +59,7 @@
             <End Role="PagosPendientes" EntitySet="PagosPendientes" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="C_PagosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -81,9 +82,11 @@
           </Key>
           <Property Name="IDPago" Type="Int32" Nullable="false" />
           <Property Name="CodigoAlumno" Type="Int32" />
-          <Property Name="Monto" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Monto" Type="Int32" />
           <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Alumno" Relationship="Self.FK__PagosPend__Codig__398D8EEE" FromRole="PagosPendientes" ToRole="Alumno" />
+          <Property Name="Mes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PagoRealizado" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -138,6 +141,8 @@
           <EntitySetMapping Name="PagosPendientes">
             <EntityTypeMapping TypeName="C_PagosModel.PagosPendientes">
               <MappingFragment StoreEntitySet="PagosPendientes">
+                <ScalarProperty Name="PagoRealizado" ColumnName="PagoRealizado" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
                 <ScalarProperty Name="IDPago" ColumnName="IDPago" />
                 <ScalarProperty Name="CodigoAlumno" ColumnName="CodigoAlumno" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
