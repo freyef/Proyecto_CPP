@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Proyecto_CPP\\Control_Pagos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|d:\\proyecto_cpp\\control_pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|d:\\proyecto_cpp\\control_pagos\\modelcp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|D:\\Proyecto_CPP\\Control_Pagos\\modelcp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:modelcp.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|d:\\proyecto_cpp\\control_pagos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA971E3F-7FF8-4FA8-8E90-CA33C19B009D}|Control_Pagos.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAABAAAAAAAAAAAUwCcBAABMAAAA",
+              "ViewState": "AQIAAL4AAAAAAAAAAADwv8sAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-29T04:45:35.997Z",
               "IsPinned": true,
@@ -40,19 +40,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModelCP.edmx [Diagram1]",
               "DocumentMoniker": "D:\\Proyecto_CPP\\Control_Pagos\\ModelCP.edmx",
               "RelativeDocumentMoniker": "ModelCP.edmx",
               "ToolTip": "D:\\Proyecto_CPP\\Control_Pagos\\ModelCP.edmx [Diagram1]",
               "RelativeToolTip": "ModelCP.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-04-16T03:33:00.031Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2024-04-16T03:33:00.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Proyecto_CPP\\Control_Pagos\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

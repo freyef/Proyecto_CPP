@@ -82,6 +82,16 @@
             this.textmonto = new System.Windows.Forms.TextBox();
             this.textmes = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.codigoAlumnoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_PagosDataSet1 = new Control_Pagos.C_PagosDataSet1();
+            this.pagosPendientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pagosPendientesTableAdapter = new Control_Pagos.C_PagosDataSet1TableAdapters.PagosPendientesTableAdapter();
+            this.IDPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PagoRealizado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,6 +99,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pagosPendientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -409,7 +422,7 @@
             this.correoDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.alumnoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 317);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 317);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(744, 175);
@@ -667,12 +680,80 @@
             this.label21.TabIndex = 26;
             this.label21.Text = "Mes:";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoAlumnoDataGridViewTextBoxColumn1,
+            this.IDPago,
+            this.Monto,
+            this.Mes,
+            this.FechaVencimiento,
+            this.PagoRealizado});
+            this.dataGridView2.DataSource = this.pagosPendientesBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(757, 318);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(619, 174);
+            this.dataGridView2.TabIndex = 42;
+            // 
+            // codigoAlumnoDataGridViewTextBoxColumn1
+            // 
+            this.codigoAlumnoDataGridViewTextBoxColumn1.DataPropertyName = "CodigoAlumno";
+            this.codigoAlumnoDataGridViewTextBoxColumn1.HeaderText = "CodigoAlumno";
+            this.codigoAlumnoDataGridViewTextBoxColumn1.Name = "codigoAlumnoDataGridViewTextBoxColumn1";
+            // 
+            // c_PagosDataSet1
+            // 
+            this.c_PagosDataSet1.DataSetName = "C_PagosDataSet1";
+            this.c_PagosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pagosPendientesBindingSource
+            // 
+            this.pagosPendientesBindingSource.DataMember = "PagosPendientes";
+            this.pagosPendientesBindingSource.DataSource = this.c_PagosDataSet1;
+            // 
+            // pagosPendientesTableAdapter
+            // 
+            this.pagosPendientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // IDPago
+            // 
+            this.IDPago.DataPropertyName = "IDPago";
+            this.IDPago.HeaderText = "IDPago";
+            this.IDPago.Name = "IDPago";
+            // 
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Monto";
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            // 
+            // Mes
+            // 
+            this.Mes.DataPropertyName = "Mes";
+            this.Mes.HeaderText = "Mes";
+            this.Mes.Name = "Mes";
+            // 
+            // FechaVencimiento
+            // 
+            this.FechaVencimiento.DataPropertyName = "FechaVencimiento";
+            this.FechaVencimiento.HeaderText = "FechaVencimiento";
+            this.FechaVencimiento.Name = "FechaVencimiento";
+            // 
+            // PagoRealizado
+            // 
+            this.PagoRealizado.DataPropertyName = "PagoRealizado";
+            this.PagoRealizado.HeaderText = "PagoRealizado";
+            this.PagoRealizado.Name = "PagoRealizado";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1379, 545);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -694,6 +775,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c_PagosDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pagosPendientesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -752,6 +836,16 @@
         private System.Windows.Forms.TextBox textmonto;
         private System.Windows.Forms.TextBox textmes;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoAlumnoDataGridViewTextBoxColumn1;
+        private C_PagosDataSet1 c_PagosDataSet1;
+        private System.Windows.Forms.BindingSource pagosPendientesBindingSource;
+        private C_PagosDataSet1TableAdapters.PagosPendientesTableAdapter pagosPendientesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PagoRealizado;
     }
 }
 

@@ -58,6 +58,8 @@ namespace Control_Pagos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'c_PagosDataSet1.PagosPendientes' Puede moverla o quitarla según sea necesario.
+            this.pagosPendientesTableAdapter.Fill(this.c_PagosDataSet1.PagosPendientes);
             // TODO: esta línea de código carga datos en la tabla 'c_PagosDataSet.Alumno' Puede moverla o quitarla según sea necesario.
             this.alumnoTableAdapter.Fill(this.c_PagosDataSet.Alumno);
 
@@ -222,8 +224,9 @@ namespace Control_Pagos
 
                     bd.PagosPendientes.Add(pagos);
                     bd.SaveChanges();
-                    MessageBox.Show("Pagos registrado correctamente.");
+                    MessageBox.Show("Pagos registrado correctamente.");               
                 }
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
@@ -294,6 +297,19 @@ namespace Control_Pagos
             catch (Exception ex)
             {
                 MessageBox.Show($"Registro no actualizado: {ex.Message}", "Registro no actualizado");
+            }
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.alumnoTableAdapter.Fill(this.c_PagosDataSet.Alumno);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
         }
